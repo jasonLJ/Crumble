@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="18" tilewidth="16" tileheight="16">
+ <tileset firstgid="1" name="world" tilewidth="16" tileheight="16">
+  <image source="world.png" width="80" height="48"/>
+ </tileset>
+ <layer name="Background" width="32" height="18">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NiYGBgIoAZiVBDDT2D0X5KzKHUDdTwA7lmDHT8DRSmpVsJmU2PcMJlBz3jiBGNTYrd7AQwKW4g1c+E7CDVDdS0m5ZuINVMarqBXLNIDS9qpCl6mj2KqYMBKdZx6wAJAAA=
+  </data>
+ </layer>
+ <layer name="Foreground" width="32" height="18">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC82VUQoAIQhEBev+V176CAZxi0ltVxiKPnwPIusi0jc5rV1fTHtJlL/qi+yxqkmEjQ5eX3RocJ7J9hzm3uOrxO985YAef+RXcD0Pj3+DjQ72Ddyur7gZlT0nWXbFrGTYdp5lz8xTdpUDw2YdmP+R5Uf+XRuGrYV9s/MAvjjd0wAJAAA=
+  </data>
+ </layer>
+ <objectgroup name="Objects" width="32" height="18">
+  <object name="Goal" x="240" y="128" width="32" height="32"/>
+ </objectgroup>
+</map>
