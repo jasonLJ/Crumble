@@ -228,15 +228,20 @@ public class RunningState extends BaseState {
 
 	private void checkTransition() throws SlickException {
 		// See if we've transitioned the whole level
+		float localQuickeningFactor = 1f;
+		
+		if(goalReached)
+			localQuickeningFactor = Game.QUICKENING_FACTOR;
+		
 		if (transitionDirection == Direction.RIGHT) {
 			if (transitionedLines >= Game.WIDTH) {
 				moveNextRoom();
-				setTransitionDetails((transitionDelay / 1000) * Game.QUICKENING_FACTOR * Game.QUICKENING_FACTOR, (((float) transitionDuration / 1000) * Game.QUICKENING_FACTOR));
+				setTransitionDetails((transitionDelay / 1000) * localQuickeningFactor * localQuickeningFactor, (((float) transitionDuration / 1000) * localQuickeningFactor));
 			}
 		} else if (transitionDirection == Direction.LEFT) {
 			if (transitionedLines <= 0) {
 				moveNextRoom();
-				setTransitionDetails((transitionDelay / 1000) * Game.QUICKENING_FACTOR * Game.QUICKENING_FACTOR, (((float) transitionDuration / 1000) * Game.QUICKENING_FACTOR));
+				setTransitionDetails((transitionDelay / 1000) * localQuickeningFactor * localQuickeningFactor, (((float) transitionDuration / 1000) * localQuickeningFactor));
 			}
 		}
 	}
