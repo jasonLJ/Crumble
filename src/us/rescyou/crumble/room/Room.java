@@ -19,6 +19,7 @@ public class Room extends TiledMap {
 	public List<Rectangle> boundingBoxes = new ArrayList<Rectangle>();
 	public Goal goal;
 
+	// Initialization
 	public Room(RunningState state, String path) throws SlickException {
 		super(path);
 		this.state = state;
